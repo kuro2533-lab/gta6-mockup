@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>GTA VI - Concept Website</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:wght@400;700&family=Montserrat:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://unpkg.com/lucide@latest"></script>
+    </head>
+    <body id="page-home" class="bg-black font-sans">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+
+        <header
+            class="fixed top-0 left-0 w-full z-40 bg-black/60 backdrop-blur-lg border-b border-pink-500/20"
+        >
+            <nav
+                class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center"
+            >
+                <a
+                    href="index.html"
+                    class="text-2xl font-bold text-white font-mono glitch-text"
+                    >GTA VI</a
+                >
+                <div
+                    id="desktop-nav"
+                    class="hidden md:flex items-center space-x-6"
+                ></div>
+                <div class="md:hidden">
+                    <select
+                        id="mobile-nav"
+                        class="bg-gray-900/80 border border-pink-500 text-white rounded-md p-2"
+                    ></select>
+                </div>
+            </nav>
+        </header>
+
+        <main id="main-content-area">
+            <div
+                class="w-full min-h-screen bg-black text-white overflow-hidden"
+            >
+                <div
+                    class="relative h-screen w-full flex flex-col items-center justify-center text-center"
+                >
+                    <div
+                        class="absolute top-0 left-0 w-full h-full overflow-hidden z-0"
+                    >
+                        <video
+                            autoplay
+                            loop
+                            muted
+                            playsinline
+                            class="w-full h-full object-cover"
+                            src="https://cdn.pixabay.com/video/2022/10/24/134919-765084930_large.mp4"
+                            onerror="this.style.display='none'"
+                        ></video>
+                        <div
+                            class="absolute top-0 left-0 w-full h-full bg-black/70 bg-gradient-to-t from-black via-transparent to-black/60"
+                        ></div>
+                    </div>
+                    <div
+                        class="relative z-10 flex flex-col items-center justify-center space-y-8 animate-fadeIn"
+                    >
+                        <span
+                            id="typing-text"
+                            class="text-xl md:text-2xl font-mono text-cyan-400 border-r-2 border-cyan-400 pr-1"
+                            >> WELCOME...</span
+                        >
+                        <svg
+                            width="90%"
+                            viewBox="0 0 1000 250"
+                            class="max-w-3xl drop-shadow-[0_0_25px_rgba(255,0,229,0.8)]"
+                        >
+                            <defs>
+                                <linearGradient
+                                    id="gta-gradient"
+                                    x1="0%"
+                                    y1="0%"
+                                    x2="0%"
+                                    y2="100%"
+                                >
+                                    <stop
+                                        offset="0%"
+                                        style="
+                                            stop-color: #ff8c00;
+                                            stop-opacity: 1;
+                                        "
+                                    />
+                                    <stop
+                                        offset="100%"
+                                        style="
+                                            stop-color: #ff00e5;
+                                            stop-opacity: 1;
+                                        "
+                                    />
+                                </linearGradient>
+                            </defs>
+                            <text
+                                x="50%"
+                                y="100"
+                                dominant-baseline="middle"
+                                text-anchor="middle"
+                                fill="url(#gta-gradient)"
+                                font-size="100"
+                                font-family="Audiowide, sans-serif"
+                                font-weight="bold"
+                            >
+                                GRAND THEFT
+                            </text>
+                            <text
+                                x="50%"
+                                y="190"
+                                dominant-baseline="middle"
+                                text-anchor="middle"
+                                fill="white"
+                                font-size="100"
+                                font-family="Audiowide, sans-serif"
+                                font-weight="bold"
+                            >
+                                AUTO VI
+                            </text>
+                        </svg>
+                        <a
+                            href="pre-book.html"
+                            id="prebook-btn"
+                            class="group relative inline-block px-8 py-4 bg-black/80 text-lg font-bold uppercase tracking-widest text-white rounded-lg border-2 border-pink-500 overflow-hidden transition-all duration-300 hover:border-cyan-400 hover:shadow-[0_0_35px_rgba(0,255,255,0.8)] animate-pulse-glow"
+                        >
+                            <span
+                                class="absolute left-0 top-0 h-full w-0 bg-cyan-400 transition-all duration-500 group-hover:w-full z-0"
+                            ></span>
+                            <span class="relative z-10 group-hover:text-black"
+                                >Pre-Book Now</span
+                            >
+                        </a>
+                        <div
+                            id="countdown-timer"
+                            class="flex items-center justify-center space-x-2 md:space-x-4 text-white font-mono"
+                        ></div>
+                    </div>
+                </div>
+                <div
+                    class="page-content-container py-20 px-4 bg-black relative"
+                >
+                    <div
+                        class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"
+                    ></div>
+                    <div class="max-w-4xl mx-auto text-center relative">
+                        <h2
+                            class="text-4xl md:text-5xl font-bold mb-8 font-mono uppercase"
+                            style="text-shadow: 0 0 15px #ff00e5"
+                        >
+                            Watch The Official Trailer
+                        </h2>
+                        <div
+                            class="aspect-video bg-black border-2 border-pink-500/50 rounded-lg shadow-[0_0_40px_rgba(255,0,229,0.5)] overflow-hidden"
+                        >
+                            <iframe
+                                class="w-full h-full"
+                                src="https://www.youtube.com/embed/QdBZY2fkU-0"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen
+                            ></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <audio id="background-music" loop src="music.mp3"></audio>
+        <div
+            id="audio-player-controls"
+            class="fixed bottom-4 right-4 z-50 flex items-center space-x-2"
+        >
+            <button
+                id="audio-play-btn"
+                class="p-3 bg-black/60 backdrop-blur-md rounded-full text-pink-500 hover:text-white hover:bg-pink-500/50 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-pink-500"
+            >
+                <i data-lucide="play"></i>
+            </button>
+            <button
+                id="audio-mute-btn"
+                class="p-3 bg-black/60 backdrop-blur-md rounded-full text-cyan-400 hover:text-white hover:bg-cyan-400/50 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+            >
+                <i data-lucide="volume-2"></i>
+            </button>
+        </div>
+
+        <footer class="bg-black border-t border-pink-500/20 py-6 text-center">
+            <p class="text-gray-500 text-sm">
+                &copy; <span id="footer-year"></span> Rockstar Games.
+            </p>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>

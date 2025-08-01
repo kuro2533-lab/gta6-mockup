@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hype Wall - GTA VI</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:wght@400;700&family=Montserrat:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://unpkg.com/lucide@latest"></script>
+    </head>
+    <body id="page-hype" class="bg-black font-sans">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+
+        <header
+            class="fixed top-0 left-0 w-full z-40 bg-black/60 backdrop-blur-lg border-b border-pink-500/20"
+        >
+            <nav
+                class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center"
+            >
+                <a
+                    href="index.html"
+                    class="text-2xl font-bold text-white font-mono glitch-text"
+                    >GTA VI</a
+                >
+                <div
+                    id="desktop-nav"
+                    class="hidden md:flex items-center space-x-6"
+                ></div>
+                <div class="md:hidden">
+                    <select
+                        id="mobile-nav"
+                        class="bg-gray-900/80 border border-pink-500 text-white rounded-md p-2"
+                    ></select>
+                </div>
+            </nav>
+        </header>
+
+        <main id="main-content-area">
+            <div
+                class="page-content-container min-h-screen w-full bg-black bg-grid-pink"
+            >
+                <div class="max-w-7xl mx-auto text-center animate-fadeIn">
+                    <h1
+                        class="text-5xl md:text-7xl font-bold text-white font-mono mb-4"
+                        style="text-shadow: 0 0 15px #ff00e5"
+                    >
+                        THE HYPE IS REAL
+                    </h1>
+                    <p class="text-pink-300 text-lg mb-12">
+                        Straight from the community. The chaos is building.
+                    </p>
+                    <div
+                        id="hype-wall-container"
+                        class="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6"
+                    ></div>
+                </div>
+            </div>
+        </main>
+
+        <audio id="background-music" loop src="music.mp3"></audio>
+        <div
+            id="audio-player-controls"
+            class="fixed bottom-4 right-4 z-50 flex items-center space-x-2"
+        >
+            <button
+                id="audio-play-btn"
+                class="p-3 bg-black/60 backdrop-blur-md rounded-full text-pink-500 hover:text-white hover:bg-pink-500/50 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-pink-500"
+            >
+                <i data-lucide="play"></i>
+            </button>
+            <button
+                id="audio-mute-btn"
+                class="p-3 bg-black/60 backdrop-blur-md rounded-full text-cyan-400 hover:text-white hover:bg-cyan-400/50 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+            >
+                <i data-lucide="volume-2"></i>
+            </button>
+        </div>
+
+        <footer class="bg-black border-t border-pink-500/20 py-6 text-center">
+            <p class="text-gray-500 text-sm">
+                &copy; <span id="footer-year"></span> Rockstar Games.
+            </p>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>

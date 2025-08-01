@@ -1,0 +1,149 @@
+:root {
+  --color-pink: #FF00E5;
+  --color-cyan: #00FFFF;
+  --color-orange: #FFD700;
+  --color-bg: #030303;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-bg);
+  color: #fff;
+  overflow-x: hidden;
+  cursor: none;
+  /* Hide default cursor */
+}
+
+h1,
+h2,
+h3,
+.font-mono {
+  font-family: 'Audiowide', 'Montserrat', sans-serif;
+}
+
+/* Custom Cursor */
+.cursor-dot,
+.cursor-outline {
+  pointer-events: none;
+  position: fixed;
+  border-radius: 50%;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-cyan);
+}
+
+.cursor-outline {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--color-pink);
+}
+
+body:hover .cursor-dot,
+body:hover .cursor-outline {
+  opacity: 1;
+}
+
+/* 3D Card Flip Utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.group:hover .group-hover\:rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Neon Grid Backgrounds */
+.bg-grid-pink {
+  background-image: linear-gradient(rgba(255, 0, 229, 0.15) 1px, transparent 1px), linear-gradient(to right, rgba(255, 0, 229, 0.15) 1px, transparent 1px);
+  background-size: 4rem 4rem;
+}
+
+.bg-grid-cyan {
+  background-image: linear-gradient(rgba(0, 255, 255, 0.15) 1px, transparent 1px), linear-gradient(to right, rgba(0, 255, 255, 0.15) 1px, transparent 1px);
+  background-size: 4rem 4rem;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.7s ease-out forwards;
+}
+
+@keyframes glitch {
+
+  0%,
+  14% {
+    text-shadow: 0.05em 0 0 #ff00e5, -0.05em 0 0 #00ffff;
+  }
+
+  15%,
+  49% {
+    text-shadow: -0.05em -0.025em 0 #ff00e5, 0.025em 0.025em 0 #00ffff;
+  }
+
+  50%,
+  99% {
+    text-shadow: 0.025em 0.05em 0 #ff00e5, 0.05em 0 0 #00ffff;
+  }
+
+  100% {
+    text-shadow: -0.025em 0 0 #ff00e5, -0.05em -0.025em 0 #00ffff;
+  }
+}
+
+.glitch-text {
+  animation: glitch 1s infinite;
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px var(--color-pink), 0 0 30px var(--color-pink);
+  }
+
+  50% {
+    box-shadow: 0 0 30px var(--color-pink), 0 0 45px var(--color-pink);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s infinite ease-in-out;
+}
+
+/* Universal padding for all page content containers */
+.page-content-container {
+  padding-top: 60px;
+  /* Increased padding */
+  padding-bottom: 40px;
+}
